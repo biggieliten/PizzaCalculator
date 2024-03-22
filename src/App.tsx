@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div>
-        <p className="text-blue text-9xl">hej</p>
+        <p className="text-yellow text-9xl">hej</p>
       </div>
     </>
   );
