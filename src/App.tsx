@@ -15,9 +15,9 @@ function App() {
     <>
       <Header />
       <ChosenProduct />
-      <TotalSum prices={pizzaPrices} />
       <PizzaContext.Provider value={initialPizzas}>
-      <PizzaCard/>
+        <PizzaCard />
+        <TotalSum />
         {/* {initialPizzas.map((pizza, index) => (
           <div key={index}>
           <h2>{pizza.name}</h2>

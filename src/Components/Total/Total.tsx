@@ -1,17 +1,15 @@
 import React from "react";
+import { useContext } from "react";
+import { PizzaContext } from "../GlobalPizza/GlobalPizza";
 
-interface PizzaTotalProps {
-  prices: number[];
-}
+const TotalSum: React.FC = () => {
+  const pizzas = useContext(PizzaContext);
 
-export const pizzaPrices = [80, 120, 100];
-
-const TotalSum: React.FC<PizzaTotalProps> = ({ prices }) => {
-  const total = prices.reduce((sum, price) => sum + price, 0);
+  const total = pizzas.reduce((sum, pizza) => sum + pizza.price, 0);
 
   return (
     <div className="place-self-auto ...">
-      <h2>Totala beloppet: {total} </h2>
+      <h2>Totala beloppet: {total} kr</h2>
     </div>
   );
 };
