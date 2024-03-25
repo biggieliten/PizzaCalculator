@@ -1,3 +1,6 @@
+import { Children, useState } from "react";
+import Button from "../Button/Button";
+
 const ChosenProduct = () => {
   const toppings = [
     { name: "Ost: " },
@@ -19,6 +22,9 @@ const ChosenProduct = () => {
     { name: "Bearniesås: " },
     { name: "Curry: " },
   ];
+  const [click, setClick] = useState<any>(null);
+
+  //   setClick(() => {});
 
   return (
     <>
@@ -37,6 +43,7 @@ const ChosenProduct = () => {
           </div>
         ))}
       </div>
+      <Button ButtonClick={click} children="Bekräfta" />
     </>
   );
 };

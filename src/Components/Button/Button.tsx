@@ -1,12 +1,16 @@
 type Button = {
-  buttonTitle: string;
+  //   buttonTitle: string;
+  //   ButtonClick: React.MouseEventHandler<HTMLButtonElement>;
   ButtonClick: React.MouseEventHandler<HTMLButtonElement>;
+  children: string;
 };
 
-const Button = ({ buttonTitle, ButtonClick }: Button) => {
+const Button = ({ children, ButtonClick }: Button) => {
   return (
     <>
-      <button onClick={ButtonClick}>{buttonTitle}</button>
+      <button className="bg-blue text-vanilla" onClick={ButtonClick}>
+        {children}{" "}
+      </button>
     </>
   );
 };
