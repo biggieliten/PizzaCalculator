@@ -2,7 +2,7 @@ import ChosenProduct from "./Components/ChosenProduct/ChosenProduct";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import "./App.css";
-import TotalSum, { pizzaPrices } from "./Components/Total/Total";
+import TotalSum from "./Components/Total/Total";
 import {
   initialPizzas,
   PizzaContext,
