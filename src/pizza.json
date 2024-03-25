@@ -1,0 +1,101 @@
+{
+  "pizzor": [
+    {
+      "name": "Vesuvio",
+      "type": "standard",
+      "ingredients": ["tomat", "ost", "skinka"]
+    },
+    {
+      "name": "Hawaii",
+      "type": "standard",
+      "ingredients": ["tomat", "ost", "skinka", "ananas"]
+    },
+    {
+      "name": "Margherita",
+      "type": "standard",
+      "ingredients": ["tomat", "ost"]
+    },
+    {
+      "name": "Altono",
+      "type": "standard",
+      "ingredients": ["tomat", "ost", "tonfisk"]
+    },
+    {
+      "name": "Kebabpizza",
+      "type": "kebab",
+      "ingredients": [
+        "kebab",
+        "lök",
+        "kebabsås",
+        "ost",
+        "tomat",
+        "champinjoner"
+      ]
+    },
+    {
+      "name": "Kebab special",
+      "type": "kebab",
+      "ingredients": [
+        "kebab",
+        "lök",
+        "kebabsås",
+        "ost",
+        "tomat",
+        "champinjoner",
+        "paprika",
+        "isbergssallad"
+      ]
+    },
+    {
+      "name": "Jamaica",
+      "type": "kebab",
+      "ingredients": ["kebab", "skinka", "räkor", "kebabsås"]
+    },
+    {
+      "name": "Hawaii special",
+      "type": "kebab",
+      "ingredients": ["kebab", "skinka", "ananas", "kebabsås"]
+    },
+    {
+      "name": "Kyckling special",
+      "type": "kyckling",
+      "ingredients": [
+        "kyckling",
+        "ost",
+        "tomat",
+        "banan",
+        "jordnötter",
+        "kebabsås"
+      ]
+    },
+    {
+      "name": "Al pollo",
+      "type": "kyckling",
+      "ingredients": [
+        "kyckling",
+        "ost",
+        "tomat",
+        "paprika",
+        "champinjoner",
+        "kebabsås"
+      ]
+    },
+    {
+      "name": "Lyx",
+      "type": "kyckling",
+      "ingredients": [
+        "kyckling",
+        "ost",
+        "banan",
+        "isbergssallad",
+        "jordnötter",
+        "bearniesås"
+      ]
+    },
+    {
+      "name": "Kyckling special",
+      "type": "kyckling",
+      "ingredients": ["kyckling", "ost", "tomat", "curry", "rödlök", "kebabsås"]
+    }
+  ]
+}
