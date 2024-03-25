@@ -2,7 +2,7 @@ import ChosenProduct from "./Components/ChosenProduct/ChosenProduct";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import "./App.css";
-import TotalSum, { pizzaPrices } from "./Components/Total/Total";
+import TotalSum from "./Components/Total/Total";
 import {
   initialPizzas,
   PizzaContext,
@@ -14,6 +14,7 @@ function App() {
   return (
     <>
       <Header />
+      <ChosenProduct />
       <PizzaContext.Provider value={initialPizzas}>
         <PizzaCard />
         {/* {initialPizzas.map((pizza, index) => (
@@ -28,8 +29,7 @@ function App() {
             </div>
             ))} */}
       </PizzaContext.Provider>
-      <ChosenProduct />
-      <TotalSum prices={pizzaPrices} />
+      <TotalSum />
       <Footer />
     </>
   );
