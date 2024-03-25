@@ -1,4 +1,4 @@
-import Card from "./Cards";
+/* import Card from "./Cards";
 
 function PizzaCard() {
   
@@ -10,8 +10,8 @@ function PizzaCard() {
       <div className="overflow-auto h-96 w-fit">
     <h1 className="font-bold text-2xl">Kebab</h1>
       <div className='flex flex-wrap gap-2 my-1'>
-      <Card title = {"Pizza"} content = {"Ingredienser"} price = {50} imageUrl="public\img\kebab.jpeg" />
-      <Card title = {"Pizza"} content = {"Ingredienser"} price = {50} imageUrl="public\img\kebab.jpeg" />
+      <Card title = {"Pizza"} content = {"Ingredienser"} price = {50} imageUrl="\img\kebab.jpeg" />
+      <Card title = {"Pizza"} content = {"Ingredienser"} price = {50} imageUrl="\img\kebab.jpeg" />
       </div>
       <div className='flex gap-2 my-1'>
       <Card title = {"Pizza"} content = {"Ingredienser"} price = {50} imageUrl="public\img\kebab.jpeg" />
@@ -46,4 +46,26 @@ function PizzaCard() {
     ;
   }
   
+  export default PizzaCard; */
+
+  import pizza from "../../pizza.json"
+  import Card from "./Cards"
+
+  const PizzaCard = () => {
+    const pizzor = pizza.pizzor
+
+    return (
+      <>
+      
+      
+      {pizzor.map((pizza)=>{
+        return <Card name={pizza.name} ingredients={pizza.ingredients}/>
+      })}
+      
+      
+      
+      </>
+    )
+
+  }
   export default PizzaCard;

@@ -11,16 +11,15 @@ function App() {
   return (
     <>
     <PizzaCard></PizzaCard>
+    <ChosenProduct />
+    {/* <div>
+      <p className="text-blue text-9xl">hej</p>
+      <h1>hola</h1>
+    </div> */}
     
     </>)
   ;
-      <ChosenProduct />
-      {/* <div>
-        <p className="text-blue text-9xl">hej</p>
-        <h1>hola</h1>
-      </div> */}
-    </>
-  );
+  
 }
 
 export default App;
