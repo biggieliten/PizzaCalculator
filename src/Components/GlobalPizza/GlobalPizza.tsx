@@ -6,6 +6,7 @@ interface Pizza {
   name: string;
   type: string;
   ingredients: string[];
+  price: number
 }
 
 /* interface PizzaData {

@@ -3,40 +3,46 @@
     {
       "name": "Vesuvio",
       "type": "standard",
-      "ingredients": ["tomat", "ost", "skinka"]
+      "ingredients": ["Tomat", "ost", "skinka"],
+      "price": 50
+      
     },
     {
       "name": "Hawaii",
       "type": "standard",
-      "ingredients": ["tomat", "ost", "skinka", "ananas"]
+      "ingredients": ["Tomat", "ost", "skinka", "ananas"],
+      "price": 50
     },
     {
       "name": "Margherita",
       "type": "standard",
-      "ingredients": ["tomat", "ost"]
+      "ingredients": ["Tomat", "ost"],
+      "price": 50
     },
     {
       "name": "Altono",
       "type": "standard",
-      "ingredients": ["tomat", "ost", "tonfisk"]
+      "ingredients": ["Tomat", "ost", "tonfisk"],
+      "price": 50
     },
     {
       "name": "Kebabpizza",
       "type": "kebab",
       "ingredients": [
-        "kebab",
+        "Kebab",
         "lök",
         "kebabsås",
         "ost",
         "tomat",
         "champinjoner"
-      ]
+      ],
+      "price": 50
     },
     {
       "name": "Kebab special",
       "type": "kebab",
       "ingredients": [
-        "kebab",
+        "Kebab",
         "lök",
         "kebabsås",
         "ost",
@@ -44,58 +50,65 @@
         "champinjoner",
         "paprika",
         "isbergssallad"
-      ]
+      ],
+      "price": 50
     },
     {
       "name": "Jamaica",
       "type": "kebab",
-      "ingredients": ["kebab", "skinka", "räkor", "kebabsås"]
+      "ingredients": ["Kebab", "skinka", "räkor", "kebabsås"],
+      "price": 50
     },
     {
       "name": "Hawaii special",
       "type": "kebab",
-      "ingredients": ["kebab", "skinka", "ananas", "kebabsås"]
+      "ingredients": ["Kebab", "skinka", "ananas", "kebabsås"],
+      "price": 50
     },
     {
       "name": "Kyckling special",
       "type": "kyckling",
       "ingredients": [
-        "kyckling",
+        "Kyckling",
         "ost",
         "tomat",
         "banan",
         "jordnötter",
         "kebabsås"
-      ]
+      ],
+      "price": 50
     },
     {
       "name": "Al pollo",
       "type": "kyckling",
       "ingredients": [
-        "kyckling",
+        "Kyckling",
         "ost",
         "tomat",
         "paprika",
         "champinjoner",
         "kebabsås"
-      ]
+      ],
+      "price": 50
     },
     {
       "name": "Lyx",
       "type": "kyckling",
       "ingredients": [
-        "kyckling",
+        "Kyckling",
         "ost",
         "banan",
         "isbergssallad",
         "jordnötter",
         "bearniesås"
-      ]
+      ],
+      "price": 50
     },
     {
       "name": "Kyckling Excellenté",
       "type": "kyckling",
-      "ingredients": ["kyckling", "ost", "tomat", "curry", "rödlök", "kebabsås"]
+      "ingredients": ["Kyckling", "ost", "tomat", "curry", "rödlök", "kebabsås"],
+      "price": 50
     }
   ]
 }

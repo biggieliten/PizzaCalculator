@@ -48,19 +48,25 @@ function PizzaCard() {
   
   export default PizzaCard; */
 
-  import pizza from "../../pizza.json"
+ 
   import Card from "./Cards"
+  import { useContext } from "react"
+  import { PizzaContext } from "../GlobalPizza/GlobalPizza"
 
   const PizzaCard = () => {
-    const pizzor = pizza.pizzor
+    const pizzor = useContext(PizzaContext)
 
     return (
       <>
       
       
+      
       {pizzor.map((pizza)=>{
-        return <Card name={pizza.name} ingredients={pizza.ingredients}/>
-      })}
+        return(  
+          <Card name={pizza.name} ingredients={pizza.ingredients} price={pizza.price}/>
+          
+        )})}
+      
       
       
       
