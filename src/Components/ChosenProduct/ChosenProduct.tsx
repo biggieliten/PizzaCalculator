@@ -43,7 +43,7 @@ const ChosenProduct = () => {
           </div>
         ))}
       </div>
-      <Button ButtonClick={click} children="Bekräfta" />
+      <Button ButtonClick={click} ButtonTitle="Bekräfta" />
     </>
   );
 };
