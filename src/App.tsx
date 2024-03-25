@@ -7,6 +7,7 @@ import {
   initialPizzas,
   PizzaContext,
 } from "./Components/GlobalPizza/GlobalPizza";
+import PizzaCard from "./Components/Cards/PizzaCard";
 
 function App() {
   console.log(initialPizzas);
@@ -16,6 +17,7 @@ function App() {
       <ChosenProduct />
       <TotalSum prices={pizzaPrices} />
       <PizzaContext.Provider value={initialPizzas}>
+      <PizzaCard/>
         {/* {initialPizzas.map((pizza, index) => (
           <div key={index}>
           <h2>{pizza.name}</h2>
