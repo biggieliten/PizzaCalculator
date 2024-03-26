@@ -48,30 +48,25 @@ function PizzaCard() {
   
   export default PizzaCard; */
 
- 
-  import Card from "./Cards"
-  import { useContext } from "react"
-  import { PizzaContext } from "../GlobalPizza/GlobalPizza"
+import Card from "./Cards";
+import { useContext } from "react";
+import { PizzaContext } from "../GlobalPizza/GlobalPizza";
 
-  const PizzaCard = () => {
-    const pizzor = useContext(PizzaContext)
+const PizzaCard = () => {
+  const pizzor = useContext(PizzaContext);
 
-    return (
-      <>
-      
-      
-      
-      {pizzor.map((pizza)=>{
-        return(  
-          <Card name={pizza.name} ingredients={pizza.ingredients} price={pizza.price}/>
-          
-        )})}
-      
-      
-      
-      
-      </>
-    )
-
-  }
-  export default PizzaCard;
+  return (
+    <>
+      {pizzor.map((pizza) => {
+        return (
+          <Card
+            name={pizza.name}
+            ingredients={pizza.ingredients}
+            price={pizza.price}
+          />
+        );
+      })}
+    </>
+  );
+};
+export default PizzaCard;
