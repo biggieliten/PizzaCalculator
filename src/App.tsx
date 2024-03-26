@@ -10,11 +10,13 @@ import {
 import PizzaCard from "./Components/Cards/PizzaCard";
 import { PizzaProvider } from "./Components/GlobalPizza/GlobalPizza";
 
+
 function App() {
   console.log(initialPizzas);
   return (
     <>
       <Header />
+        
       <PizzaProvider>
         <PizzaCard />
         {/* {initialPizzas.map((pizza, index) => (
