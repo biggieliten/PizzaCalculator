@@ -28,7 +28,7 @@
         )})}
       </div>
       <div className="kycklingpizza">
-        <h1 className="font-bold">Pizza Klass 3</h1>
+        <h1 className="font-bold">Pizza Klass 33</h1>
       {kycklingPizza.map((pizza)=>{
         return(  
           <Card name={pizza.name} ingredients={pizza.ingredients} price={pizza.price}/>
