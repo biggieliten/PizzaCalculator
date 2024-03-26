@@ -27,10 +27,10 @@ export const PizzaContext = createContext({
 });
 
 export const PizzaProvider: React.FC<PizzaProviderProps> = ({ children }) => {
-  const [state, dispatch] = useReducer(pizzaReducer, initialPizzas);
+  const [pizzaState, dispatch] = useReducer(pizzaReducer, []);
 
   return (
-    <PizzaContext.Provider value={{ pizzas: state, dispatch }}>
+    <PizzaContext.Provider value={{ pizzas: pizzaState, dispatch }}>
       {children}
     </PizzaContext.Provider>
   );
