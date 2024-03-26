@@ -5,7 +5,7 @@ import { Pizza } from "../../pizzaTypes";
 import { initialPizzas } from "../GlobalPizza/GlobalPizza";
 
 const PizzaCard = () => {
-  /* const pizzaData: { pizzas: Pizza[] } = useContext(PizzaContext); */
+  
 
   const standardPizza = initialPizzas.filter(
     (pizza: { type?: string }) => pizza.type === "standard"
