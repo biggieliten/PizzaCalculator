@@ -17,17 +17,6 @@ function App() {
       <Header />
       <PizzaProvider>
         <PizzaCard />
-        {/* {initialPizzas.map((pizza, index) => (
-			<div key={index}>
-			<h2>{pizza.name}</h2>
-			<p>{pizza.type}</p>
-			<ul>
-			{pizza.ingredients.map((ingredient, index) => (
-				<li key={index}>{ingredient}</li>
-				))}
-				</ul>
-				</div>
-            ))} */}
         <ChosenProduct />
         <TotalSum />
       </PizzaProvider>
