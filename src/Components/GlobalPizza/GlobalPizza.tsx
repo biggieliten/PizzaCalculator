@@ -1,15 +1,15 @@
-import React from "react";
 import pizzaData from "../../pizza.json";
-import { createContext, useContext } from "react";
+import { createContext } from "react";
+import { Pizza } from "../../pizzaTypes";
 
-interface Pizza {
+/* type Pizza = {
   name: string;
   type: string;
   ingredients: string[];
-  price: number
-}
+  price: number;
+}; */
 
-/* interface PizzaData {
+/* type PizzaData = {
     pizzor: Pizza[];
 }
  */
