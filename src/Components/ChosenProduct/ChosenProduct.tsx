@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Button from "../Button/Button";
+import { PizzaContext } from "../GlobalPizza/GlobalPizza";
 
 const ChosenProduct = () => {
   const toppings = [
@@ -26,10 +27,27 @@ const ChosenProduct = () => {
 
   //   setClick(() => {});
 
+  const { pizzas, dispatch } = useContext(PizzaContext);
+  console.log(pizzas, "pizzor");
+
+  const AddPizzaToCart = () => {
+    const newPizza = {
+      name: "Hawaii",
+      type: "regular",
+      ingredients: ["tomatsås", "ost", "skinka", "ananas"],
+      price: 100,
+    };
+    dispatch({ type: "ADD_PIZZA", payload: newPizza });
+  };
+
   return (
     <>
       <h1>Val</h1>
-      <h2>"Vald Pizza"</h2>
+      {pizzas.map((pizza) => (
+        <>
+          <h2>{pizza.name}</h2>
+        </>
+      ))}
       <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
         {toppings.map((topping) => (
           <div className="flex flex-row relative  ">
@@ -43,7 +61,7 @@ const ChosenProduct = () => {
           </div>
         ))}
       </div>
-      <Button ButtonClick={click} ButtonTitle="Bekräfta" />
+      <Button ButtonClick={AddPizzaToCart} ButtonTitle="Bekräfta" />
     </>
   );
 };

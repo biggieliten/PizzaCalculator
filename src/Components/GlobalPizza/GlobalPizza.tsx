@@ -8,11 +8,14 @@ type PizzaProviderProps = {
 
 type PizzaAction =
   | { type: "ADD_PIZZA"; payload: Pizza }
+  | { type: "MOD_PIZZA"; payload: any }
   | { type: "REMOVE_PIZZA"; payload: string };
 
 const pizzaReducer = (state: Pizza[], action: PizzaAction): Pizza[] => {
   switch (action.type) {
     case "ADD_PIZZA":
+      return [...state, action.payload];
+    case "MOD_PIZZA":
       return [...state, action.payload];
     case "REMOVE_PIZZA":
       return state.filter((pizza: Pizza) => pizza.name !== action.payload);

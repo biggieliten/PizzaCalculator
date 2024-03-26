@@ -12,15 +12,15 @@ const TotalSum: React.FC = (): React.ReactNode => {
 
   console.log({ pizzas });
 
-  const AddPizza = () => {
-    const newPizza = {
-      name: "Hawaii",
-      type: "regular",
-      ingredients: ["tomatsås", "ost", "skinka", "ananas"],
-      price: 100,
-    };
-    dispatch({ type: "ADD_PIZZA", payload: newPizza });
-  };
+  //   const AddPizza = () => {
+  //     const newPizza = {
+  //       name: "Hawaii",
+  //       type: "regular",
+  //       ingredients: ["tomatsås", "ost", "skinka", "ananas"],
+  //       price: 100,
+  //     };
+  //     dispatch({ type: "ADD_PIZZA", payload: newPizza });
+  //   };
 
   return (
     <div className="place-self-auto ...">
@@ -28,7 +28,7 @@ const TotalSum: React.FC = (): React.ReactNode => {
         <PizzaDetails key={index} pizza={pizza} />
       ))}
       <h2>Totala beloppet: {total} kr</h2>
-      <Button ButtonClick={AddPizza} ButtonTitle="Lägg till pizza" />
+      {/* <Button ButtonClick={AddPizza} ButtonTitle="Lägg till pizza" /> */}
     </div>
   );
 };
