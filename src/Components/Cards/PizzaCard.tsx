@@ -2,17 +2,18 @@ import Card from "./Cards";
 import { useContext } from "react";
 import { PizzaContext } from "../GlobalPizza/GlobalPizza";
 import { Pizza } from "../../pizzaTypes";
+import { initialPizzas } from "../GlobalPizza/GlobalPizza";
 
 const PizzaCard = () => {
-  const pizzor: { pizzas: Pizza[] } = useContext(PizzaContext);
+  /* const pizzaData: { pizzas: Pizza[] } = useContext(PizzaContext); */
 
-  const standardPizza = pizzor.pizzas.filter(
+  const standardPizza = initialPizzas.filter(
     (pizza: { type: string }) => pizza.type === "standard"
   );
-  const kebabPizza = pizzor.pizzas.filter(
+  const kebabPizza = initialPizzas.filter(
     (pizza: { type: string }) => pizza.type === "kebab"
   );
-  const kycklingPizza = pizzor.pizzas.filter(
+  const kycklingPizza = initialPizzas.filter(
     (pizza: { type: string }) => pizza.type === "kyckling"
   );
 
@@ -48,7 +49,7 @@ const PizzaCard = () => {
           )}
         </div>
         <div className="kycklingpizza">
-          <h1 className="font-bold">Pizza Klass 33</h1>
+          <h1 className="font-bold">Pizza Klass 3</h1>
           {kycklingPizza.map(
             (pizza: { name: string; ingredients: string[]; price: number }) => {
               return (
