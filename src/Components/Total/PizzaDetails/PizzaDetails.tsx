@@ -6,7 +6,7 @@ const PizzaDetails = ({ pizza }: { pizza: Pizza }) => {
   console.log("Pizza Details:", pizza.name, pizza.ingredients);
 
   return (
-    <div>
+    <div className="">
       <h3>{pizza.name}</h3>
       <ul>
         {pizza.ingredients.map((ingredients, index) => (

@@ -23,7 +23,7 @@ const TotalSum: React.FC = (): React.ReactNode => {
   //   };
 
   return (
-    <div className="place-self-auto ...">
+    <div className="flex flex-col w-1/3 p-4 border border-gray-200">
       {pizzas.map((pizza, index) => (
         <PizzaDetails key={index} pizza={pizza} />
       ))}

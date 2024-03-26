@@ -19,7 +19,7 @@ const PizzaCard = () => {
 
   return (
     <>
-      <div className="overflow-auto h-96 w-fit gap-4 mt-6">
+      <div className="flex flex-col w-1/3 p-4 border border-gray-200">
         <div className="standardpizza ">
           <h1 className="font-bold">Pizza Klass 1</h1>
           {standardPizza.map(
