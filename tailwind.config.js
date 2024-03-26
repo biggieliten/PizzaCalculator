@@ -4,6 +4,7 @@ export default {
   theme: {
     colors: {
       yellow: "#FFDE7D",
+      darkyellow: "#f5c545",
       blue: "#112A46",
       vanilla: "#F8F3D4",
     },
