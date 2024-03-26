@@ -8,13 +8,14 @@ import {
   PizzaContext,
 } from "./Components/GlobalPizza/GlobalPizza";
 import PizzaCard from "./Components/Cards/PizzaCard";
+import { PizzaProvider } from "./Components/GlobalPizza/GlobalPizza";
 
 function App() {
   console.log(initialPizzas);
   return (
     <>
       <Header />
-      <PizzaContext.Provider value={initialPizzas}>
+      <PizzaProvider>
         <PizzaCard />
         {/* {initialPizzas.map((pizza, index) => (
 			<div key={index}>
@@ -27,9 +28,9 @@ function App() {
 				</ul>
 				</div>
             ))} */}
-      </PizzaContext.Provider>
-      <ChosenProduct />
-      <TotalSum />
+        <ChosenProduct />
+        <TotalSum />
+      </PizzaProvider>
       <Footer />
     </>
   );
