@@ -8,13 +8,13 @@ const PizzaCard = () => {
   /* const pizzaData: { pizzas: Pizza[] } = useContext(PizzaContext); */
 
   const standardPizza = initialPizzas.filter(
-    (pizza: { type: string }) => pizza.type === "standard"
+    (pizza: { type?: string }) => pizza.type === "standard"
   );
   const kebabPizza = initialPizzas.filter(
-    (pizza: { type: string }) => pizza.type === "kebab"
+    (pizza: { type?: string }) => pizza.type === "kebab"
   );
   const kycklingPizza = initialPizzas.filter(
-    (pizza: { type: string }) => pizza.type === "kyckling"
+    (pizza: { type?: string }) => pizza.type === "kyckling"
   );
 
   return (
