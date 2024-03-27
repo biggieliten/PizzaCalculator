@@ -10,18 +10,18 @@ import {
 import PizzaCard from "./Components/Cards/PizzaCard";
 import { PizzaProvider } from "./Components/GlobalPizza/GlobalPizza";
 
-
 function App() {
   console.log(initialPizzas);
   return (
     <>
       <Header />
-        
-      <PizzaProvider>
-        <PizzaCard />
-        <ChosenProduct />
-        <TotalSum />
-      </PizzaProvider>
+      <div className="flex flex-col md:flex-row justify-around">
+        <PizzaProvider>
+          <PizzaCard />
+          <ChosenProduct />
+          <TotalSum />
+        </PizzaProvider>
+      </div>
       <Footer />
     </>
   );

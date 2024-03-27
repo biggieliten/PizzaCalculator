@@ -60,8 +60,8 @@ const ChosenProduct = () => {
             />
           </div>
         ))}
+        <Button ButtonClick={AddPizzaToCart} ButtonTitle="Bekräfta" />
       </div>
-      <Button ButtonClick={AddPizzaToCart} ButtonTitle="Bekräfta" />
     </>
   );
 };
