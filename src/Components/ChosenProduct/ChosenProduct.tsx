@@ -2,7 +2,11 @@ import { useContext, useState } from "react";
 import Button from "../Button/Button";
 import { PizzaContext } from "../GlobalPizza/GlobalPizza";
 
+
+
+
 const ChosenProduct = () => {
+  const [ingredients, setIngredients] = useState([{}]);
   const toppings = [
     { name: "Ost: " },
     { name: "Tomat: " },
@@ -23,6 +27,13 @@ const ChosenProduct = () => {
     { name: "Bearniesås: " },
     { name: "Curry: " },
   ];
+  const handleToppingChange = (e: any) => {
+    setIngredients(e.target.value)
+   
+
+  }
+  console.log(ingredients);
+  
   const [click, setClick] = useState<any>(null);
 
   //   setClick(() => {});
@@ -33,7 +44,7 @@ const ChosenProduct = () => {
 
   const AddPizzaToCart = () => {
     if (currentPizza) {
-      modifiedDispatch({ type: "MOD_PIZZA", payload: currentPizza });
+      modifiedDispatch({ type: "MOD_PIZZA", payload: {...currentPizza, ingredients} });
     } else {
       console.error("No pizza added first");
     }
@@ -44,6 +55,8 @@ const ChosenProduct = () => {
       console.error("No pizza added");
     }
     // dispatch({ type: "REMOVE_PIZZA", payload: currentPizza.name });
+    console.log(currentPizza);
+    
   };
 
   return (
@@ -51,6 +64,7 @@ const ChosenProduct = () => {
       <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
         <h1 className="font-bold">Val</h1>
         <h2>{currentPizza?.name}</h2>
+        
       </div>
       <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
         <h1 className="font-bold">Toppings</h1>
@@ -58,6 +72,8 @@ const ChosenProduct = () => {
           <div className="flex flex-row relative  ">
             <label htmlFor={topping.name}>{topping.name}</label>
             <input
+            value={topping.name}
+            onChange={handleToppingChange}
               type="checkbox"
               name={topping.name}
               id=""

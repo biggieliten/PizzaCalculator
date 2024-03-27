@@ -11,7 +11,7 @@ const TotalSum: React.FC = (): React.ReactNode => {
 
   const total = modifiedPizza.reduce((sum, pizza) => sum + pizza.price, 0);
 
-  console.log({ currentPizza });
+  console.log( "hej", modifiedPizza );
 
   //   const AddPizza = () => {
   //     const newPizza = {

@@ -9,9 +9,9 @@ const PizzaDetails = ({ pizza }: { pizza: Pizza }) => {
     <div className="">
       <h3>{pizza.name}</h3>
       <ul>
-        {pizza.ingredients.map((ingredients, index) => (
+        {/* {pizza.ingredients.map((ingredients, index) => (
           <li key={index}>{ingredients}</li>
-        ))}
+        ))}  */}
       </ul>
       <p>Pris: {pizza.price}</p>
       <Button ButtonClick={logDetails} ButtonTitle="Logga" />
