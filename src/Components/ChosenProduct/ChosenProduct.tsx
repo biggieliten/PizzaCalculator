@@ -42,13 +42,16 @@ const ChosenProduct = () => {
 
   return (
     <>
-      <h1>Val</h1>
-      {pizzas.map((pizza) => (
-        <>
-          <h2>{pizza.name}</h2>
-        </>
-      ))}
       <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
+        <h1 className="font-bold">Val</h1>
+        {pizzas.map((pizza) => (
+          <>
+            <h2>{pizza.name}</h2>
+          </>
+        ))}
+      </div>
+      <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
+        <h1 className="font-bold">Toppings</h1>
         {toppings.map((topping) => (
           <div className="flex flex-row relative  ">
             <label htmlFor={topping.name}>{topping.name}</label>
