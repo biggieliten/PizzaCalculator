@@ -35,7 +35,7 @@ const PizzaCard = () => {
           )}
         </div>
         <div className="kebabpizza ">
-          <h1 className="font-bold">Pizza Klass 2</h1>
+          <h1 className="font-bold">Pizza Klass 22</h1>
           {kebabPizza.map(
             (pizza: { name: string; ingredients: string[]; price: number }) => {
               return (
