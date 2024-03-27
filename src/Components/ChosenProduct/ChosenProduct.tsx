@@ -24,6 +24,7 @@ const ChosenProduct = () => {
     { name: "Curry: ", key: "curry" },
   ];
 
+<<<<<<< HEAD
   const { modifiedPizza, setModifiedPizza } = useContext(PizzaContext);
   //   const [modifiedPizza, setModifiedPizza] = useState({});
 
@@ -36,6 +37,27 @@ const ChosenProduct = () => {
       })
     );
     console.log(modifiedPizza, "moddad");
+=======
+  //   setClick(() => {});
+
+  const { currentPizza, dispatch, modifiedDispatch } = useContext(PizzaContext);
+
+  console.log(currentPizza, "pizzor");
+
+  const AddPizzaToCart = () => {
+    if (currentPizza) {
+      modifiedDispatch({ type: "MOD_PIZZA", payload: currentPizza });
+    } else {
+      console.error("No pizza added first");
+    }
+    if (currentPizza) {
+      dispatch({ type: "REMOVE_PIZZA", payload: currentPizza.name });
+    } else {
+      // handle the case when currentPizza is null
+      console.error("No pizza added");
+    }
+    // dispatch({ type: "REMOVE_PIZZA", payload: currentPizza.name });
+>>>>>>> submain
   };
   const PizzaIngredients = pizzas[0]?.ingredients;
   //   const checkedArray = toppings.filter((a) => PizzaIngredients.includes(a));
@@ -45,11 +67,7 @@ const ChosenProduct = () => {
     <>
       <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
         <h1 className="font-bold">Val</h1>
-        {pizzas.map((pizza) => (
-          <>
-            <h2>{pizza.name}</h2>
-          </>
-        ))}
+        <h2>{currentPizza?.name}</h2>
       </div>
       <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
         <h1 className="font-bold">Toppings</h1>

@@ -5,13 +5,18 @@ import PizzaDetails from "./PizzaDetails/PizzaDetails";
 import Button from "../Button/Button";
 
 const TotalSum: React.FC = (): React.ReactNode => {
+<<<<<<< HEAD
   //   const { pizzas, dispatch } = useContext(PizzaContext);
   //   const { modifiedPizza } = useContext(PizzaContext);
+=======
+  const { currentPizza, dispatch, modifiedDispatch, modifiedPizza } =
+    useContext(PizzaContext);
+>>>>>>> submain
   const [pizzaCount, setPizzaCount] = useState(0);
 
-  const total = pizzas.reduce((sum, pizza) => sum + pizza.price, 0);
+  const total = modifiedPizza.reduce((sum, pizza) => sum + pizza.price, 0);
 
-  console.log({ pizzas });
+  console.log({ currentPizza });
 
   //   const AddPizza = () => {
   //     const newPizza = {
@@ -25,7 +30,7 @@ const TotalSum: React.FC = (): React.ReactNode => {
 
   return (
     <div className="flex flex-col w-1/3 p-4 border border-gray-200">
-      {pizzas.map((pizza, index) => (
+      {modifiedPizza.map((pizza, index) => (
         <PizzaDetails key={index} pizza={pizza} />
       ))}
       <h2>Totala beloppet: {total} kr</h2>
