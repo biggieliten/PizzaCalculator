@@ -6,6 +6,13 @@ type PizzaProviderProps = {
   children: ReactNode;
 };
 
+type PizzaContextType = {
+  currentPizza: Pizza | null;
+  modifiedPizza: Pizza[];
+  dispatch: React.Dispatch<PizzaAction>;
+  modifiedDispatch: React.Dispatch<PizzaAction>;
+};
+
 type PizzaAction =
   | { type: "ADD_PIZZA"; payload: Pizza }
   | { type: "MOD_PIZZA"; payload: any }
@@ -24,16 +31,32 @@ const pizzaReducer = (state: Pizza[], action: PizzaAction): Pizza[] => {
   }
 };
 
-export const PizzaContext = createContext({
-  pizzas: [] as Pizza[],
+/* export const PizzaContext = createContext({
+  currentPizza: [] as Pizza[],
+  modifiedPizza: [] as Pizza[],
   dispatch: (() => {}) as React.Dispatch<PizzaAction>,
+}); */
+
+export const PizzaContext = createContext<PizzaContextType>({
+  currentPizza: null,
+  modifiedPizza: [],
+  dispatch: () => {},
+  modifiedDispatch: () => {},
 });
 
 export const PizzaProvider: React.FC<PizzaProviderProps> = ({ children }) => {
-  const [pizzaState, dispatch] = useReducer(pizzaReducer, []);
+  const [currentState, dispatch] = useReducer(pizzaReducer, []); // Provide an initial state of an empty array
+  const [modifiedState, modifiedDispatch] = useReducer(pizzaReducer, []);
 
   return (
-    <PizzaContext.Provider value={{ pizzas: pizzaState, dispatch }}>
+    <PizzaContext.Provider
+      value={{
+        currentPizza: currentState[0],
+        dispatch,
+        modifiedPizza: modifiedState,
+        modifiedDispatch,
+      }}
+    >
       {children}
     </PizzaContext.Provider>
   );
