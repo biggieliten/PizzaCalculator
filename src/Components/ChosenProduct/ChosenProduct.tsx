@@ -43,7 +43,6 @@ const ChosenProduct = () => {
   return (
     <>
       <h1>Val</h1>
-
       {pizzas.map((pizza) => (
         <>
           <h2>{pizza.name}</h2>
@@ -61,8 +60,8 @@ const ChosenProduct = () => {
             />
           </div>
         ))}
+        <Button ButtonClick={AddPizzaToCart} ButtonTitle="Bekräfta" />
       </div>
-      <Button ButtonClick={AddPizzaToCart} ButtonTitle="Bekräfta" />
     </>
   );
 };
