@@ -23,7 +23,6 @@ const ChosenProduct = () => {
     { name: "Bearniesås: ", key: "bearniesås" },
     { name: "Curry: ", key: "curry" },
   ];
-  const { pizzas, dispatch } = useContext(PizzaContext);
   //   const { modifiedPizza, setModifiedPizza }: any = useContext(PizzaContext);
   //   const [modifiedPizza, setModifiedPizza] = useState({});
 
