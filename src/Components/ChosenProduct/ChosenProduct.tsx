@@ -43,6 +43,7 @@ const ChosenProduct = () => {
   return (
     <>
       <h1>Val</h1>
+
       {pizzas.map((pizza) => (
         <>
           <h2>{pizza.name}</h2>
