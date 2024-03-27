@@ -1,6 +1,8 @@
 import pizzaData from "../../pizza.json";
-import { createContext, ReactNode, useReducer } from "react";
+import { createContext, ReactNode, useReducer, useState } from "react";
 import { Pizza } from "../../pizzaTypes";
+
+const [modifiedPizza, setModifiedPizza] = useState({});
 
 type PizzaProviderProps = {
   children: ReactNode;
@@ -33,7 +35,11 @@ export const PizzaProvider: React.FC<PizzaProviderProps> = ({ children }) => {
   const [pizzaState, dispatch] = useReducer(pizzaReducer, []);
 
   return (
-    <PizzaContext.Provider value={{ pizzas: pizzaState, dispatch }}>
+    <PizzaContext.Provider
+      value={
+        { modifiedPizza, setModifiedPizza } && { pizzas: pizzaState, dispatch }
+      }
+    >
       {children}
     </PizzaContext.Provider>
   );

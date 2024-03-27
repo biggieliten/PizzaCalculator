@@ -5,7 +5,8 @@ import PizzaDetails from "./PizzaDetails/PizzaDetails";
 import Button from "../Button/Button";
 
 const TotalSum: React.FC = (): React.ReactNode => {
-  const { pizzas, dispatch } = useContext(PizzaContext);
+  //   const { pizzas, dispatch } = useContext(PizzaContext);
+  //   const { modifiedPizza } = useContext(PizzaContext);
   const [pizzaCount, setPizzaCount] = useState(0);
 
   const total = pizzas.reduce((sum, pizza) => sum + pizza.price, 0);
