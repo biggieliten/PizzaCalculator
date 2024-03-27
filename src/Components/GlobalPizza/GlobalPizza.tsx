@@ -11,6 +11,7 @@ type PizzaContextType = {
   modifiedPizza: Pizza[];
   dispatch: React.Dispatch<PizzaAction>;
   modifiedDispatch: React.Dispatch<PizzaAction>;
+  toppings?: any;
 };
 
 type PizzaAction =

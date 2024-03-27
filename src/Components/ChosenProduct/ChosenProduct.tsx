@@ -1,27 +1,28 @@
 import { useContext, useState } from "react";
 import Button from "../Button/Button";
 import { PizzaContext } from "../GlobalPizza/GlobalPizza";
+import { toppingsType } from "../../pizzaTypes";
 
 const ChosenProduct = () => {
-  const toppings = [
-    { name: "Ost: " },
-    { name: "Tomat: " },
-    { name: "Lök: " },
-    { name: "Rödlök: " },
-    { name: "Isbergssallad: " },
-    { name: "Paprika: " },
-    { name: "Banan: " },
-    { name: "Ananas: " },
-    { name: "Champinjoner: " },
-    { name: "Jordnötter: " },
-    { name: "Kebab: " },
-    { name: "Kyckling: " },
-    { name: "Skinka: " },
-    { name: "Tonfisk: " },
-    { name: "Räkor: " },
-    { name: "Kebabsås: " },
-    { name: "Bearniesås: " },
-    { name: "Curry: " },
+  const toppings: toppingsType[] = [
+    { name: "Extra ost: ", price: 10 },
+    { name: "Extra tomat: ", price: 10 },
+    { name: "Extra lök: ", price: 10 },
+    { name: "Extra rödlök: ", price: 10 },
+    { name: "Extra isbergssallad: ", price: 10 },
+    { name: "Extra paprika: ", price: 10 },
+    { name: "Extra banan: ", price: 10 },
+    { name: "Extra ananas: ", price: 10 },
+    { name: "Extra champinjoner: ", price: 10 },
+    { name: "Extra jordnötter: ", price: 10 },
+    { name: "Extra kebab: ", price: 10 },
+    { name: "Extra kyckling: ", price: 10 },
+    { name: "Extra skinka: ", price: 10 },
+    { name: "Extra tonfisk: ", price: 10 },
+    { name: "Extra räkor: ", price: 10 },
+    { name: "Extra kebabsås: ", price: 10 },
+    { name: "Extra bearniesås: ", price: 10 },
+    { name: "Extra curry: ", price: 10 },
   ];
   const [click, setClick] = useState<any>(null);
 
@@ -33,7 +34,10 @@ const ChosenProduct = () => {
 
   const AddPizzaToCart = () => {
     if (currentPizza) {
-      modifiedDispatch({ type: "MOD_PIZZA", payload: currentPizza });
+      modifiedDispatch({
+        type: "MOD_PIZZA",
+        payload: { currentPizza, toppings },
+      });
     } else {
       console.error("No pizza added first");
     }
@@ -45,6 +49,13 @@ const ChosenProduct = () => {
     }
     // dispatch({ type: "REMOVE_PIZZA", payload: currentPizza.name });
   };
+
+  //   const [filter, setFilter] = useState("");
+  //   const AddToppings = () => {
+  //     if (filter === "checked") {
+  //       console.log(filter);
+  //     }
+  //   };
 
   return (
     <>

@@ -4,3 +4,8 @@ export type Pizza = {
   ingredients: string[];
   price: number;
 };
+
+export type toppingsType = {
+  name: string;
+  price: number;
+};
