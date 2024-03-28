@@ -14,7 +14,7 @@ type CardProps = {
 const Card: React.FC<CardProps> = ({ name, ingredients, price }) => {
   const { dispatch } = useContext(PizzaContext);
   const addPizzaToChosen = () => {
-    dispatch({ type: "ADD_PIZZA", payload: {name: name , ingredients: ingredients , price: price} });
+    dispatch({ type: "ADD_PIZZA", payload: {name: name , ingredients: ingredients , price: price,} });
   };
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg bg-darkyellow border mb-2">

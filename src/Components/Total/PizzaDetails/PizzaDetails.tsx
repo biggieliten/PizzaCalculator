@@ -1,6 +1,7 @@
 import { Pizza } from "../../../pizzaTypes";
 import Button from "../../Button/Button";
 
+
 const PizzaDetails = ({ pizza }: { pizza: Pizza }) => {
   const logDetails = () => console.log(pizza);
   console.log("Pizza Details:", pizza.name, pizza.ingredients);

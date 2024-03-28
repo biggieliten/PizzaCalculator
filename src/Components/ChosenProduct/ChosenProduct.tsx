@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+/* import { useContext, useState } from "react";
 import Button from "../Button/Button";
 import { PizzaContext } from "../GlobalPizza/GlobalPizza";
 
@@ -78,6 +78,89 @@ const ChosenProduct = () => {
               name={topping.name}
               id=""
               className="absolute right-0 top-1 "
+            />
+          </div>
+        ))}
+        <Button ButtonClick={AddPizzaToCart} ButtonTitle="Bekräfta" />
+      </div>
+    </>
+  );
+};
+
+export default ChosenProduct;
+ */
+
+import { useContext, useState } from "react";
+import Button from "../Button/Button";
+import { PizzaContext } from "../GlobalPizza/GlobalPizza";
+
+const ChosenProduct = () => {
+  const [selectedToppings, setSelectedToppings] = useState<string[]>([]);
+  const toppings = [
+    "Ost",
+    "Tomat",
+    "Lök",
+    "Rödlök",
+    "Isbergssallad",
+    "Paprika",
+    "Banan",
+    "Ananas",
+    "Champinjoner",
+    "Jordnötter",
+    "Kebab",
+    "Kyckling",
+    "Skinka",
+    "Tonfisk",
+    "Räkor",
+    "Kebabsås",
+    "Bearniesås",
+    "Curry",
+  ];
+
+  const handleToppingChange = (topping: string) => {
+    if (selectedToppings.includes(topping)) {
+      setSelectedToppings(selectedToppings.filter((item) => item !== topping));
+    } else {
+      setSelectedToppings([...selectedToppings, topping]);
+    }
+  };
+
+  const { currentPizza, dispatch, modifiedDispatch } = useContext(PizzaContext);
+
+  const AddPizzaToCart = () => {
+    if (currentPizza) {
+      modifiedDispatch({
+        type: "MOD_PIZZA",
+        payload: { ...currentPizza, toppings: selectedToppings },
+      });
+    } else {
+      console.error("No pizza added first");
+    }
+    if (currentPizza) {
+      dispatch({ type: "REMOVE_PIZZA", payload: currentPizza.name });
+    } else {
+      console.error("No pizza added");
+    }
+  };
+
+  return (
+    <>
+      <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
+        <h1 className="font-bold">Val</h1>
+        <h2>{currentPizza?.name}</h2>
+      </div>
+      <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
+        <h1 className="font-bold">Toppings</h1>
+        {toppings.map((topping) => (
+          <div className="flex flex-row relative" key={topping}>
+            <label htmlFor={topping}>{topping}</label>
+            <input
+              value={topping}
+              onChange={() => handleToppingChange(topping)}
+              type="checkbox"
+              name={topping}
+              id=""
+              className="absolute right-0 top-1"
             />
           </div>
         ))}
