@@ -1,9 +1,13 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import Button from "../Button/Button";
 import { PizzaContext } from "../GlobalPizza/GlobalPizza";
 import { toppingsType } from "../../pizzaTypes";
+
 const ChosenProduct = () => {
   const [selectedToppings, setSelectedToppings] = useState<toppingsType[]>([]);
+  const checkboxRef = useRef<HTMLInputElement>(null);
+  const [resetCheckbox, setResetCheckbox] = useState(0);
+
   const toppings: toppingsType[] = [
     { name: "Extra ost ", price: 10 },
     { name: "Extra tomat ", price: 10 },
@@ -60,6 +64,9 @@ const ChosenProduct = () => {
     } else {
       console.error("No pizza added");
     }
+    setResetCheckbox((prevCheckbox) => prevCheckbox + 1);
+
+    setSelectedToppings([]);
   };
 
   return (
@@ -70,12 +77,15 @@ const ChosenProduct = () => {
       </div>
       <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
         <h1 className="font-bold">Toppings</h1>
+
         {toppings.map((topping) => (
           <div className="flex flex-row relative" key={topping.name}>
             <label
               htmlFor={topping.name}
             >{`${topping.name} (${topping.price} kr)`}</label>
             <input
+              key={`${topping.name}-${resetCheckbox}`}
+              ref={checkboxRef}
               value={topping.name}
               onChange={() => handleToppingChange(topping)}
               type="checkbox"

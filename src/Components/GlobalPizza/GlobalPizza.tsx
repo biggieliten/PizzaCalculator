@@ -22,7 +22,7 @@ type PizzaAction =
 const pizzaReducer = (state: Pizza[], action: PizzaAction): Pizza[] => {
   switch (action.type) {
     case "ADD_PIZZA":
-      return [...state, action.payload];
+      return [action.payload];
     case "MOD_PIZZA":
       return [...state, action.payload];
     case "REMOVE_PIZZA":
