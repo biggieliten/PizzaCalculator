@@ -15,7 +15,7 @@ const ChosenProduct = () => {
     { name: "Extra isbergssallad ", price: 10 },
     { name: "Extra paprika ", price: 10 },
     { name: "Extra banan ", price: 10 },
-    { name: "Extra ananas: ", price: 10 },
+    { name: "Extra ananas ", price: 10 },
     { name: "Extra champinjoner ", price: 10 },
     { name: "Extra jordnötter ", price: 10 },
     { name: "Extra kebab ", price: 10 },
@@ -70,18 +70,17 @@ const ChosenProduct = () => {
   return (
     <>
       <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
-        <h1 className="font-bold">Val</h1>
+        <h1 className="font-bold">Välj en Pizza</h1>
         <h2>{currentPizza?.name}</h2>
         {/* <Button ButtonClick={() => deletePizza(pizza.id)} ButtonTitle="Delete" /> */}
       </div>
       <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
-        <h1 className="font-bold">Toppings</h1>
+        <h1 className="font-bold">Tillval 10kr styck</h1>
 
         {toppings.map((topping) => (
           <div className="flex flex-row relative" key={topping.name}>
-            <label
-              htmlFor={topping.name}
-            >{`${topping.name} (${topping.price} kr)`}</label>
+            <label htmlFor={topping.name}>{`${topping.name} 
+            `}</label>
             <input
               key={`${topping.name}-${resetCheckbox}`}
               ref={checkboxRef}
@@ -94,7 +93,7 @@ const ChosenProduct = () => {
             />
           </div>
         ))}
-        <Button ButtonClick={AddPizzaToCart} ButtonTitle="Bekräfta" />
+        <Button ButtonClick={AddPizzaToCart} ButtonTitle="Bekräfta tillval" />
       </div>
     </>
   );
