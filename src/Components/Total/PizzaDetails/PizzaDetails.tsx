@@ -3,12 +3,21 @@ import { Pizza } from "../../../pizzaTypes";
 import Button from "../../Button/Button";
 import { PizzaContext } from "../../GlobalPizza/GlobalPizza";
 
-const PizzaDetails = ({ pizza }: { pizza: Pizza }) => {
-  const logDetails = () => console.log(pizza);
-  console.log("Pizza Details:", pizza.name, pizza.ingredients);
-  const { modifiedPizza } = useContext(PizzaContext);
 
-  return (
+
+
+const PizzaDetails = ({ pizza }: { pizza: Pizza }) => {
+    const {modifiedDispatch} = useContext(PizzaContext)
+    
+    const deletePizza = (pizzaId: string) => {
+        modifiedDispatch({type: "REMOVE_PIZZA", payload: pizzaId})
+    }
+    
+    
+    
+    
+    
+    return (
     <div className="">
       <h3>{pizza.name}</h3>
 
@@ -24,7 +33,7 @@ const PizzaDetails = ({ pizza }: { pizza: Pizza }) => {
         ))}  */}
       </ul>
       {/* <p>Pris: {pizza.price}</p> */}
-      <Button ButtonClick={logDetails} ButtonTitle="Logga" />
+      <Button ButtonClick={() => deletePizza(pizza.id)} ButtonTitle="Delete" />
     </div>
   );
 };
