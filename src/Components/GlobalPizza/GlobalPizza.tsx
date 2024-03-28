@@ -1,6 +1,7 @@
 import pizzaData from "../../pizza.json";
 import { createContext, ReactNode, useReducer } from "react";
 import { Pizza } from "../../pizzaTypes";
+import { v4 as uuidv4 } from "uuid";
 
 type PizzaProviderProps = {
   children: ReactNode;
@@ -22,11 +23,11 @@ type PizzaAction =
 const pizzaReducer = (state: Pizza[], action: PizzaAction): Pizza[] => {
   switch (action.type) {
     case "ADD_PIZZA":
-      return [action.payload];
+      return [{ ...action.payload, id: uuidv4() }];
     case "MOD_PIZZA":
       return [...state, action.payload];
     case "REMOVE_PIZZA":
-      return state.filter((pizza: Pizza) => pizza.name !== action.payload);
+      return state.filter((pizza: Pizza) => pizza.id !== action.payload);
     default:
       return state;
   }
@@ -63,6 +64,11 @@ export const PizzaProvider: React.FC<PizzaProviderProps> = ({ children }) => {
   );
 };
 
-export const initialPizzas: Pizza[] = pizzaData.pizzor;
+export const initialPizzas: Pizza[] = pizzaData.pizzor.map((pizza) => ({
+  ...pizza,
+  id: uuidv4(), // Assign a unique ID
+}));
+
+/* export const initialPizzas: Pizza[] = pizzaData.pizzor; */
 
 /* export const PizzaContext = createContext([] as Pizza[]); */

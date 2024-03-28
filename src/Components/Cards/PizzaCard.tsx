@@ -23,12 +23,13 @@ const PizzaCard = () => {
         <div className="standardpizza ">
           <h1 className="font-bold">Pizza Klass 1</h1>
           {standardPizza.map(
-            (pizza: { name: string; ingredients: string[]; price: number }) => {
+            (pizza: { name: string; ingredients: string[]; price: number; id:string} ) => {
               return (
                 <Card
                   name={pizza.name}
                   ingredients={pizza.ingredients}
                   price={pizza.price}
+                  id={pizza.id}
                 />
               );
             }
@@ -37,12 +38,13 @@ const PizzaCard = () => {
         <div className="kebabpizza ">
           <h1 className="font-bold">Pizza Klass 2</h1>
           {kebabPizza.map(
-            (pizza: { name: string; ingredients: string[]; price: number }) => {
+            (pizza: { name: string; ingredients: string[]; price: number; id:string }) => {
               return (
                 <Card
                   name={pizza.name}
                   ingredients={pizza.ingredients}
                   price={pizza.price}
+                  id={pizza.id}
                 />
               );
             }
@@ -51,12 +53,13 @@ const PizzaCard = () => {
         <div className="kycklingpizza">
           <h1 className="font-bold">Pizza Klass 3</h1>
           {kycklingPizza.map(
-            (pizza: { name: string; ingredients: string[]; price: number }) => {
+            (pizza: { name: string; ingredients: string[]; price: number; id:string }) => {
               return (
                 <Card
                   name={pizza.name}
                   ingredients={pizza.ingredients}
                   price={pizza.price}
+                  id={pizza.id}
                 />
               );
             }

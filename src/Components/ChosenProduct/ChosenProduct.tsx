@@ -2,7 +2,6 @@ import { useContext, useRef, useState } from "react";
 import Button from "../Button/Button";
 import { PizzaContext } from "../GlobalPizza/GlobalPizza";
 import { toppingsType } from "../../pizzaTypes";
-
 const ChosenProduct = () => {
   const [selectedToppings, setSelectedToppings] = useState<toppingsType[]>([]);
   const checkboxRef = useRef<HTMLInputElement>(null);
@@ -60,13 +59,10 @@ const ChosenProduct = () => {
       console.error("No pizza added first");
     }
     if (currentPizza) {
-      dispatch({ type: "REMOVE_PIZZA", payload: currentPizza.name });
+      dispatch({ type: "REMOVE_PIZZA", payload: currentPizza.id });
     } else {
       console.error("No pizza added");
     }
-    setResetCheckbox((prevCheckbox) => prevCheckbox + 1);
-
-    setSelectedToppings([]);
   };
 
   return (
@@ -74,6 +70,7 @@ const ChosenProduct = () => {
       <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
         <h1 className="font-bold">Val</h1>
         <h2>{currentPizza?.name}</h2>
+        {/* <Button ButtonClick={() => deletePizza(pizza.id)} ButtonTitle="Delete" /> */}
       </div>
       <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
         <h1 className="font-bold">Toppings</h1>

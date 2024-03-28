@@ -8,13 +8,18 @@ type CardProps = {
   name: string;
   ingredients: string[];
   price: number;
+  id:string
+ 
   
 }
 
-const Card: React.FC<CardProps> = ({ name, ingredients, price }) => {
+const Card: React.FC<CardProps> = ({ name, ingredients, price, id }) => {
   const { dispatch } = useContext(PizzaContext);
   const addPizzaToChosen = () => {
-    dispatch({ type: "ADD_PIZZA", payload: {name: name , ingredients: ingredients , price: price,} });
+    dispatch({ type: "ADD_PIZZA", payload: {name: name , ingredients: ingredients , price: price, id: id} });
+   
+    console.log(id);
+    
   };
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg bg-darkyellow border mb-2">
