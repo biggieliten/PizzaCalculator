@@ -63,6 +63,8 @@ const ChosenProduct = () => {
     } else {
       console.error("No pizza added");
     }
+    setResetCheckbox((prevKey) => prevKey + 1);
+    setSelectedToppings([]);
   };
 
   return (
