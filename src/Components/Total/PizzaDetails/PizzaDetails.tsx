@@ -11,19 +11,19 @@ const PizzaDetails = ({ pizza }: { pizza: Pizza }) => {
   return (
     <div className="">
       <h3>{pizza.name}</h3>
-      {modifiedPizza.map((pizza, index) => (
-        <div key={index} className="mb-2">
-          <h3>{pizza.name}</h3>
-          <p>Price: {pizza.price} kr</p>
-          <i>Toppings: {pizza.toppings && pizza.toppings.join(", ")}</i>
-        </div>
-      ))}
+
+      <div className="mb-2">
+        {/* <h3>{pizza.name}</h3> */}
+        {/* <p>Price: {pizza.price} kr</p> */}
+        <i>Toppings: {pizza.toppings && pizza.toppings.join(", ")}</i>
+      </div>
+
       <ul>
         {/* {pizza.ingredients.map((ingredients, index) => (
           <li key={index}>{ingredients}</li>
         ))}  */}
       </ul>
-      <p>Pris: {pizza.price}</p>
+      {/* <p>Pris: {pizza.price}</p> */}
       <Button ButtonClick={logDetails} ButtonTitle="Logga" />
     </div>
   );
