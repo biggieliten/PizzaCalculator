@@ -43,7 +43,10 @@ const TotalSum: React.FC = (): React.ReactNode => {
           <p>Toppings: {pizza.toppings && pizza.toppings.join(", ")}</p>
         </div>
       ))}
-      <h2>Totala beloppet: {modifiedPizza.reduce((sum, pizza) => sum + pizza.price, 0)} kr</h2>
+      <h2>
+        Totala beloppet:{" "}
+        {modifiedPizza.reduce((sum, pizza) => sum + pizza.price, 0)} kr
+      </h2>
     </div>
   );
 };
