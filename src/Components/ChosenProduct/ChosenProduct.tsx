@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import { PizzaContext } from "../GlobalPizza/GlobalPizza";
 import { toppingsType } from "../../pizzaTypes";
 const ChosenProduct = () => {
-  const [selectedToppings, setSelectedToppings] = useState<string[]>([]);
+  const [selectedToppings, setSelectedToppings] = useState<toppingsType[]>([]);
   const toppings: toppingsType[] = [
     { name: "Extra ost ", price: 10 },
     { name: "Extra tomat ", price: 10 },
@@ -25,9 +25,11 @@ const ChosenProduct = () => {
     { name: "Extra curry ", price: 10 },
   ];
 
-  const handleToppingChange = (topping: string) => {
-    if (selectedToppings.includes(topping)) {
-      setSelectedToppings(selectedToppings.filter((item) => item !== topping));
+  const handleToppingChange = (topping: toppingsType) => {
+    if (selectedToppings.some((t) => t.name === topping.name)) {
+      setSelectedToppings(
+        selectedToppings.filter((t) => t.name !== topping.name)
+      );
     } else {
       setSelectedToppings([...selectedToppings, topping]);
     }
@@ -37,9 +39,18 @@ const ChosenProduct = () => {
 
   const AddPizzaToCart = () => {
     if (currentPizza) {
+      const totalToppingsPrice = selectedToppings.reduce(
+        (sum, topping) => sum + topping.price,
+        0
+      );
+      const totalPrice = currentPizza.price + totalToppingsPrice;
       modifiedDispatch({
         type: "MOD_PIZZA",
-        payload: { ...currentPizza, toppings: selectedToppings },
+        payload: {
+          ...currentPizza,
+          toppings: selectedToppings.map((t) => t.name),
+          price: totalPrice,
+        },
       });
     } else {
       console.error("No pizza added first");
@@ -61,10 +72,12 @@ const ChosenProduct = () => {
         <h1 className="font-bold">Toppings</h1>
         {toppings.map((topping) => (
           <div className="flex flex-row relative" key={topping.name}>
-            <label htmlFor={topping.name}>{topping.name}</label>
+            <label
+              htmlFor={topping.name}
+            >{`${topping.name} (${topping.price} kr)`}</label>
             <input
               value={topping.name}
-              onChange={() => handleToppingChange(topping.name)}
+              onChange={() => handleToppingChange(topping)}
               type="checkbox"
               name={topping.name}
               id=""
