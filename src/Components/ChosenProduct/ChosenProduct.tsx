@@ -94,7 +94,11 @@ const ChosenProduct = () => {
             />
           </div>
         ))}
-        <Button ButtonClick={AddPizzaToCart} ButtonTitle="Bekräfta" />
+        <Button
+          ButtonClick={AddPizzaToCart}
+          ButtonTitle="Bekräfta"
+          styling=""
+        />
       </div>
     </>
   );

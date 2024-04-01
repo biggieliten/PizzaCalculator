@@ -5,8 +5,6 @@ import { Pizza } from "../../pizzaTypes";
 import { initialPizzas } from "../GlobalPizza/GlobalPizza";
 
 const PizzaCard = () => {
-  
-
   const standardPizza = initialPizzas.filter(
     (pizza: { type?: string }) => pizza.type === "standard"
   );
@@ -19,47 +17,68 @@ const PizzaCard = () => {
 
   return (
     <>
-      <div className="flex flex-col w-1/3 p-4 border border-gray-200">
-        <div className="standardpizza ">
-          <h1 className="font-bold">Pizza Klass 1</h1>
+      <div className="flex flex-col items-center w-1/3 h-screen p-4 border border-gray-200 overflow-scroll">
+        <h1 className="font-bold">Pizza Klass 1</h1>
+        <div className="standardpizza flex flex-wrap items-center justify-center mb-6">
           {standardPizza.map(
-            (pizza: { name: string; ingredients: string[]; price: number; id:string} ) => {
+            (pizza: {
+              name: string;
+              ingredients: string[];
+              price: number;
+              id: string;
+              img?: any;
+            }) => {
               return (
                 <Card
                   name={pizza.name}
                   ingredients={pizza.ingredients}
                   price={pizza.price}
                   id={pizza.id}
+                  img={pizza.img}
                 />
               );
             }
           )}
         </div>
-        <div className="kebabpizza ">
-          <h1 className="font-bold">Pizza Klass 2</h1>
+        <h1 className="font-bold">Pizza Klass 2</h1>
+        <div className="kebabpizza flex flex-wrap items-center justify-center mb-6">
           {kebabPizza.map(
-            (pizza: { name: string; ingredients: string[]; price: number; id:string }) => {
+            (pizza: {
+              name: string;
+              ingredients: string[];
+              price: number;
+              id: string;
+              img?: any;
+            }) => {
               return (
                 <Card
                   name={pizza.name}
                   ingredients={pizza.ingredients}
                   price={pizza.price}
                   id={pizza.id}
+                  img={pizza.img}
                 />
               );
             }
           )}
         </div>
-        <div className="kycklingpizza">
-          <h1 className="font-bold">Pizza Klass 3</h1>
+        <h1 className="font-bold">Pizza Klass 3</h1>
+        <div className="kycklingpizza flex flex-wrap items-center  justify-center">
           {kycklingPizza.map(
-            (pizza: { name: string; ingredients: string[]; price: number; id:string }) => {
+            (pizza: {
+              name: string;
+              ingredients: string[];
+              price: number;
+              id: string;
+              img?: any;
+            }) => {
               return (
                 <Card
                   name={pizza.name}
                   ingredients={pizza.ingredients}
                   price={pizza.price}
                   id={pizza.id}
+                  img={pizza.img}
                 />
               );
             }
