@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className="flex flex-col md:flex-row justify-around ">
+      <div className="flex flex-col md:flex-row justify-around  ">
         <PizzaProvider>
           <PizzaCard />
           <ChosenProduct />
