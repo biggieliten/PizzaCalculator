@@ -78,7 +78,9 @@ const ChosenProduct = () => {
             <div className=" max-w-sm rounded overflow-hidden shadow-lg bg-darkyellow border mt-4">
               <div className="px-6 py-4">
                 <div className="font-bold text-2xl mb-2">
-                  {currentPizza.name}
+                  {currentPizza.name}{" "}
+                  <img src={currentPizza?.img} alt="pizza" />
+                  {currentPizza.ingredients.join(", ")}
                 </div>
               </div>
             </div>
