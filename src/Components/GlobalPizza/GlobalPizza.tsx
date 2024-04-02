@@ -33,12 +33,6 @@ const pizzaReducer = (state: Pizza[], action: PizzaAction): Pizza[] => {
   }
 };
 
-/* export const PizzaContext = createContext({
-  currentPizza: [] as Pizza[],
-  modifiedPizza: [] as Pizza[],
-  dispatch: (() => {}) as React.Dispatch<PizzaAction>,
-}); */
-
 export const PizzaContext = createContext<PizzaContextType>({
   currentPizza: null,
   modifiedPizza: [],
@@ -47,7 +41,7 @@ export const PizzaContext = createContext<PizzaContextType>({
 });
 
 export const PizzaProvider: React.FC<PizzaProviderProps> = ({ children }) => {
-  const [currentState, dispatch] = useReducer(pizzaReducer, []); // Provide an initial state of an empty array
+  const [currentState, dispatch] = useReducer(pizzaReducer, []);
   const [modifiedState, modifiedDispatch] = useReducer(pizzaReducer, []);
 
   return (
