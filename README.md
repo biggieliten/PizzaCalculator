@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# Pizza App README
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This README gives you a quick rundown of our pizza calculator app. It's designed for customers who want to figure out how much their pizza will cost with extra toppings and see the total price for all their pizzas in one place.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
 
-## Expanding the ESLint configuration
+- React
+- TypeScript
+- Vite
+- CSS
+- TailWind
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- Select a pizza of your choice.
+- Select optional extra toppings.
+- Add pizza to cart.
+- Calculate the cost of a pizza based on selected toppings.
+- View the total price in the shopping cart for all pizzas.
+- Delete pizzas from shopping cart
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Installation
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+To run this app locally, follow these steps:
+
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd pizza-app`
+3. Install dependencies: `npm install` or `yarn install`
+4. Start the development server: `npm run dev` or `yarn dev`
+5. Open your browser and navigate to `http://localhost:3000` to view the app.
+
+## Usage
+
+Once the app is running, follow these steps to use it:
+
+1. Select the toppings for your pizza from the available options.
+2. The app will calculate the cost of the pizza based on your selected toppings.
+3. Add multiple pizzas to the cart to see the total price.
+
+## Credits
+
+This project was developed by [Sam, Robin, Filip, Philip, Johan].
