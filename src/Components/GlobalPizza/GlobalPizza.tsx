@@ -12,12 +12,12 @@ type PizzaContextType = {
   modifiedPizza: Pizza[];
   dispatch: React.Dispatch<PizzaAction>;
   modifiedDispatch: React.Dispatch<PizzaAction>;
-  toppings?: any;
+  toppings?: string[];
 };
 
 type PizzaAction =
   | { type: "ADD_PIZZA"; payload: Pizza }
-  | { type: "MOD_PIZZA"; payload: any }
+  | { type: "MOD_PIZZA"; payload: Pizza }
   | { type: "REMOVE_PIZZA"; payload: string };
 
 const pizzaReducer = (state: Pizza[], action: PizzaAction): Pizza[] => {
