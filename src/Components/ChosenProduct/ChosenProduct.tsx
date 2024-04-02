@@ -69,11 +69,11 @@ const ChosenProduct = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center m-4 w-1/3 p-4 border border-gray-200">
+      <div className="flex flex-col items-center m-4 mt-0 w-1/3 p-4 border border-gray-200">
         <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
           <h1 className="font-bold px-6 py-4">Välj en Pizza</h1>
         </div>
-        {currentPizza && (
+        {currentPizza && ( // If currentPizza is not null, render the following div
           <div className=" max-w-sm rounded overflow-hidden shadow-lg bg-darkyellow border mb-2">
             <div className="px-6 py-4">
               <div className="font-bold text-2xl mb-2">{currentPizza.name}</div>

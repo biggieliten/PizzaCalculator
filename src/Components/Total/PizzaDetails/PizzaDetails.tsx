@@ -14,7 +14,7 @@ const PizzaDetails = ({ pizza }: { pizza: Pizza }) => {
     <div className="">
       <div className="mb-2">
         <strong>{pizza.name}</strong>
-        <p>Ingridienser: {pizza.ingredients.join(", ")}</p>
+        <p>Ingredienser: {pizza.ingredients.join(", ")}</p>
         <p>Pris: {pizza.price} kr</p>
         <i>Tillval: {pizza.toppings && pizza.toppings.join(", ")}</i>
       </div>
