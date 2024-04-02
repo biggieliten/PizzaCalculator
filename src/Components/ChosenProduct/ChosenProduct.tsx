@@ -75,12 +75,13 @@ const ChosenProduct = () => {
             <h1 className="font-bold px-6 py-4">Välj en Pizza</h1>
           </div>
           {currentPizza && (
-            <div className=" max-w-sm rounded overflow-hidden shadow-lg bg-darkyellow border mt-4">
+            <div className=" max-w-sm rounded overflow-hidden shadow-lg bg-darkyellow border mt-4 flex flex-col items-center justify-center">
               <div className="px-6 py-4">
-                <div className="font-bold text-2xl mb-2">
+                <div className="font-bold text-2xl mb-2 size-fit">
                   {currentPizza.name}
                 </div>
               </div>
+              <img src={currentPizza?.img} alt="" className="size-28" />
             </div>
           )}
           <div className=" bg-vanilla flex flex-col border-solid border-2 border-sky-500 size-auto w-72 p-5 rounded mg m-5">
