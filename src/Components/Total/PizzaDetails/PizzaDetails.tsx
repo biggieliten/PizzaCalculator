@@ -27,9 +27,10 @@ const PizzaDetails = ({ pizza }: { pizza: Pizza }) => {
       {/* <p>Pris: {pizza.price}</p> */}
       <Button
         ButtonClick={() => deletePizza(pizza.id)}
-        ButtonTitle="Delete"
-        styling=""
+        ButtonTitle="Ta bort Pizza"
+        styling="bg-blue text-vanilla w-fit p-1 rounded"
       />
+      <p>______________________________________________________</p>
     </div>
   );
 };

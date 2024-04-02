@@ -17,7 +17,7 @@ const PizzaCard = () => {
 
   return (
     <>
-      <div className="bg-vanilla flex flex-col items-center w-1/3 h-screen p-4 border border-gray-200 overflow-y-scroll">
+      <div className="bg-yellow flex flex-col items-center w-1/3 h-screen p-4 border border-gray-200 overflow-y-scroll">
         <h1 className="font-bold">Pizza Klass 1</h1>
         <div className="standardpizza flex flex-wrap items-center justify-center mb-6">
           {standardPizza.map(
