@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
+* {
+  scrollbar-width: none;
+}
 ::-webkit-scrollbar {
-  
   display: none; /* width of the scrollbar */
 }
-
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
