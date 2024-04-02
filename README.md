@@ -1,10 +1,10 @@
 # Pizza App README
 
-## Overview
+## Översikt
 
-This README gives you a quick rundown of our pizza calculator app. It's designed for customers who want to figure out how much their pizza will cost with extra toppings and see the total price for all their pizzas in one place.
+Denna README ger dig en snabb genomgång av vår pizzakalkylatorapp. Den är utformad för kunder som vill räkna ut hur mycket deras pizza kommer att kosta med extra topping och se det totala priset för alla sina pizzor på ett ställe.
 
-## Technologies Used
+## Använda tekniker
 
 - React
 - TypeScript
@@ -12,33 +12,35 @@ This README gives you a quick rundown of our pizza calculator app. It's designed
 - CSS
 - TailWind
 
-## Features
+## Funktioner
 
-- Select a pizza of your choice.
-- Select optional extra toppings.
-- Add pizza to cart.
-- Calculate the cost of a pizza based on selected toppings.
-- View the total price in the shopping cart for all pizzas.
-- Delete pizzas from shopping cart
+- Välj en pizza från menyn.
+- Välj valfria extra toppings.
+- Lägg till pizzan i varukorgen.
+- Beräkna kostnaden för en pizza baserat på valda toppings.
+- Visa det totala priset i varukorgen för alla pizzor.
+- Ta bort pizzor från varukorgen.
 
 ## Installation
 
-To run this app locally, follow these steps:
+För att köra denna app lokalt, följ dessa steg:
 
-1. Clone the repository: `git clone <repository-url>`
-2. Navigate to the project directory: `cd pizza-app`
-3. Install dependencies: `npm install` or `yarn install`
-4. Start the development server: `npm run dev` or `yarn dev`
-5. Open your browser and navigate to `http://localhost:3000` to view the app.
+1. Klona repository: `git clone <repository-url>`
+2. Navigera till projektmappen: `cd pizza-app`
+3. Installera beroenden: `npm install` eller `yarn install`
+4. Starta utvecklingsservern: `npm run dev` eller `yarn dev`
+5. Öppna din webbläsare och gå till `http://localhost:3000` för att se appen.
 
-## Usage
+## Användning
 
-Once the app is running, follow these steps to use it:
+När appen körs, följ dessa steg för att använda den:
 
-1. Select the toppings for your pizza from the available options.
-2. The app will calculate the cost of the pizza based on your selected toppings.
-3. Add multiple pizzas to the cart to see the total price.
+1. Välj en pizza.
+2. Välj valfria extra toppings för din pizza från de tillgängliga alternativen.
+3. Appen kommer att beräkna kostnaden för pizzan baserat på dina valda toppings.
+4. Lägg till flera pizzor i varukorgen för att se det totala priset.
+5. Klicka på "Ta bort" för att ta bort en pizza från varukorgen.
 
 ## Credits
 
-This project was developed by [Sam, Robin, Filip, Philip, Johan].
+Detta projekt utvecklades av [Sam, Robin, Filip, Philip, Johan].
