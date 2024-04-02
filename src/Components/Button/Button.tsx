@@ -1,6 +1,4 @@
 type Button = {
-  //   buttonTitle: string;
-  //   ButtonClick: React.MouseEventHandler<HTMLButtonElement>;
   ButtonClick: React.MouseEventHandler<HTMLButtonElement>;
   ButtonTitle: string;
 };
