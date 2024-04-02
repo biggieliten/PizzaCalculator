@@ -12,14 +12,6 @@ const PizzaDetails = ({ pizza }: { pizza: Pizza }) => {
 
   return (
     <div className="">
-      <h3>{pizza.name}</h3>
-
-  const deletePizza = (pizzaId: string) => {
-    modifiedDispatch({ type: "REMOVE_PIZZA", payload: pizzaId });
-  };
-
-  return (
-    <div className="">
       <div className="mb-2">
         <strong>{pizza.name}</strong>
         <p>Ingredienser: {pizza.ingredients.join(", ")}</p>
