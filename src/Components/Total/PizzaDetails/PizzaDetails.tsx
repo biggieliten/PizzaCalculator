@@ -19,12 +19,6 @@ const PizzaDetails = ({ pizza }: { pizza: Pizza }) => {
         <i>Tillval: {pizza.toppings && pizza.toppings.join(", ")}</i>
       </div>
 
-      <ul>
-        {/* {pizza.ingredients.map((ingredients, index) => (
-          <li key={index}>{ingredients}</li>
-        ))}  */}
-      </ul>
-      {/* <p>Pris: {pizza.price}</p> */}
       <Button
         ButtonClick={() => deletePizza(pizza.id)}
         ButtonTitle="Ta bort Pizza"
