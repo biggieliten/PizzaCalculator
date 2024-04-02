@@ -12,14 +12,6 @@ Denna README ger dig en snabb genomgång av vår pizzakalkylatorapp. Den är utf
 - CSS
 - TailWind
 
-## Funktioner
-
-- Välj en pizza från menyn.
-- Välj valfria extra toppings.
-- Lägg till pizzan i varukorgen.
-- Beräkna kostnaden för en pizza baserat på valda toppings.
-- Visa det totala priset i varukorgen för alla pizzor.
-- Ta bort pizzor från varukorgen.
 
 ## Installation
 
