@@ -4,28 +4,28 @@
       "name": "Vesuvio",
       "type": "standard",
       "ingredients": ["Tomat", "ost", "skinka"],
-      "price": 50,
+      "price": 80,
       "img": "src/assets/PizzaImages/vesuvio.jpg"
     },
     {
       "name": "Hawaii",
       "type": "standard",
       "ingredients": ["Tomat", "ost", "skinka", "ananas"],
-      "price": 50,
+      "price": 85,
       "img": "src/assets/PizzaImages/hawaii.jpg"
     },
     {
       "name": "Margherita",
       "type": "standard",
       "ingredients": ["Tomat", "ost"],
-      "price": 50,
+      "price": 75,
       "img": "src/assets/PizzaImages/margherita.jpg"
     },
     {
       "name": "Altono",
       "type": "standard",
       "ingredients": ["Tomat", "ost", "tonfisk"],
-      "price": 50,
+      "price": 80,
       "img": "src/assets/PizzaImages/altono.jpg"
     },
     {
@@ -39,7 +39,7 @@
         "tomat",
         "champinjoner"
       ],
-      "price": 50,
+      "price": 95,
       "img": "src/assets/PizzaImages/kebabpizza.png"
     },
     {
@@ -55,21 +55,21 @@
         "paprika",
         "isbergssallad"
       ],
-      "price": 50,
+      "price": 105,
       "img": "src/assets/PizzaImages/kebabpizza.png"
     },
     {
       "name": "Jamaica",
       "type": "kebab",
       "ingredients": ["Kebab", "skinka", "räkor", "kebabsås"],
-      "price": 50,
+      "price": 100,
       "img": "src/assets/PizzaImages/kebabpizza.png"
     },
     {
       "name": "Hawaii special",
       "type": "kebab",
       "ingredients": ["Kebab", "skinka", "ananas", "kebabsås"],
-      "price": 50,
+      "price": 100,
       "img": "src/assets/PizzaImages/hawaiispecial.jpg"
     },
     {
@@ -83,7 +83,7 @@
         "jordnötter",
         "kebabsås"
       ],
-      "price": 50,
+      "price": 100,
       "img": "src/assets/PizzaImages/kycklingspecial.jpg"
     },
     {
@@ -97,7 +97,7 @@
         "champinjoner",
         "kebabsås"
       ],
-      "price": 50,
+      "price": 100,
       "img": "src/assets/PizzaImages/alpollo.jpg"
     },
     {
@@ -111,7 +111,7 @@
         "jordnötter",
         "bearniesås"
       ],
-      "price": 50,
+      "price": 105,
       "img": "src/assets/PizzaImages/lyx.jpg"
     },
     {
@@ -125,7 +125,7 @@
         "rödlök",
         "kebabsås"
       ],
-      "price": 50,
+      "price": 105,
       "img": "src/assets/PizzaImages/kycklingexcellente.jpg"
     }
   ]

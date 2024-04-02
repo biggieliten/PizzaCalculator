@@ -13,6 +13,8 @@ const TotalSum: React.FC = (): React.ReactNode => {
       {modifiedPizza.map((pizza, index) => (
         <PizzaDetails pizza={pizza} key={index} />
       ))}
+      <p>______________________________________________________</p>
+
       <h2>
         <strong>Totalt belopp: </strong>
         {modifiedPizza.reduce((sum, pizza) => sum + pizza.price, 0)} kr

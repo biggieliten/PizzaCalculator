@@ -5,7 +5,7 @@ export type Pizza = {
   ingredients: string[];
   price: number;
   toppings?: string[];
-  img?: any;
+  img: string;
 };
 
 export type toppingsType = {

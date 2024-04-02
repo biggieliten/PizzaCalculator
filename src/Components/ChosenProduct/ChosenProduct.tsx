@@ -84,7 +84,7 @@ const ChosenProduct = () => {
             </div>
           )}
           <div className=" bg-vanilla flex flex-col border-solid border-2 border-sky-500 size-auto w-72 p-5 rounded mg m-5">
-            <h1 className="font-bold">Tillval 10kr styck</h1>
+            <h1 className="font-bold self-center mb-2">Tillval 10kr styck</h1>
             {toppings.map((topping) => (
               <div className="flex flex-row relative" key={topping.name}>
                 <label htmlFor={topping.name}>{`${topping.name} 
@@ -104,7 +104,7 @@ const ChosenProduct = () => {
             <Button
               ButtonClick={AddPizzaToCart}
               ButtonTitle="Bekräfta"
-              styling="bg-blue text-vanilla w-20 h-7 mt-5 rounded "
+              styling="bg-blue text-vanilla w-20 h-7 mt-5 rounded self-center flex flex-center justify-center "
             />{" "}
           </div>
         </div>
