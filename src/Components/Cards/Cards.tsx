@@ -1,17 +1,9 @@
-// Card.tsx
 import Button from "../Button/Button";
 import { PizzaContext } from "../GlobalPizza/GlobalPizza";
 import { useContext } from "react";
+import { Pizza } from "../../pizzaTypes";
 
-type CardProps = {
-  name: string;
-  ingredients: string[];
-  price: number;
-  id: string;
-  img?: undefined;
-};
-
-const Card: React.FC<CardProps> = ({ name, ingredients, price, id, img }) => {
+const Card: React.FC<Pizza> = ({ name, ingredients, price, id, img }) => {
   const { dispatch } = useContext(PizzaContext);
   const addPizzaToChosen = () => {
     dispatch({
@@ -24,8 +16,6 @@ const Card: React.FC<CardProps> = ({ name, ingredients, price, id, img }) => {
         img: img,
       },
     });
-
-    console.log(id);
   };
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg bg-darkyellow border mb-2 m-5">

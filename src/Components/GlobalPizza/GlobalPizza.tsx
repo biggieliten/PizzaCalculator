@@ -60,9 +60,5 @@ export const PizzaProvider: React.FC<PizzaProviderProps> = ({ children }) => {
 
 export const initialPizzas: Pizza[] = pizzaData.pizzor.map((pizza) => ({
   ...pizza,
-  id: uuidv4(), // Assign a unique ID
+  id: uuidv4(),
 }));
-
-/* export const initialPizzas: Pizza[] = pizzaData.pizzor; */
-
-/* export const PizzaContext = createContext([] as Pizza[]); */
