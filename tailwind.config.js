@@ -8,7 +8,11 @@ export default {
       blue: "#112A46",
       vanilla: "#F8F3D4",
     },
-    extend: {},
+    extend: {
+      cardHeight: {
+        "24rem": "24rem",
+      },
+    },
   },
   plugins: [],
 };

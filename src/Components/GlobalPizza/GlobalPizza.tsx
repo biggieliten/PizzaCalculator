@@ -12,12 +12,12 @@ type PizzaContextType = {
   modifiedPizza: Pizza[];
   dispatch: React.Dispatch<PizzaAction>;
   modifiedDispatch: React.Dispatch<PizzaAction>;
-  toppings?: any;
+  toppings?: string[];
 };
 
 type PizzaAction =
   | { type: "ADD_PIZZA"; payload: Pizza }
-  | { type: "MOD_PIZZA"; payload: any }
+  | { type: "MOD_PIZZA"; payload: Pizza }
   | { type: "REMOVE_PIZZA"; payload: string };
 
 const pizzaReducer = (state: Pizza[], action: PizzaAction): Pizza[] => {
@@ -33,12 +33,6 @@ const pizzaReducer = (state: Pizza[], action: PizzaAction): Pizza[] => {
   }
 };
 
-/* export const PizzaContext = createContext({
-  currentPizza: [] as Pizza[],
-  modifiedPizza: [] as Pizza[],
-  dispatch: (() => {}) as React.Dispatch<PizzaAction>,
-}); */
-
 export const PizzaContext = createContext<PizzaContextType>({
   currentPizza: null,
   modifiedPizza: [],
@@ -47,7 +41,7 @@ export const PizzaContext = createContext<PizzaContextType>({
 });
 
 export const PizzaProvider: React.FC<PizzaProviderProps> = ({ children }) => {
-  const [currentState, dispatch] = useReducer(pizzaReducer, []); // Provide an initial state of an empty array
+  const [currentState, dispatch] = useReducer(pizzaReducer, []);
   const [modifiedState, modifiedDispatch] = useReducer(pizzaReducer, []);
 
   return (
@@ -66,9 +60,5 @@ export const PizzaProvider: React.FC<PizzaProviderProps> = ({ children }) => {
 
 export const initialPizzas: Pizza[] = pizzaData.pizzor.map((pizza) => ({
   ...pizza,
-  id: uuidv4(), // Assign a unique ID
+  id: uuidv4(),
 }));
-
-/* export const initialPizzas: Pizza[] = pizzaData.pizzor; */
-
-/* export const PizzaContext = createContext([] as Pizza[]); */

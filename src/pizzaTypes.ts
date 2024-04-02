@@ -1,5 +1,3 @@
-/* import { v4 as uuidv4 } from 'uuid'; */
-
 export type Pizza = {
   id: string;
   name: string;
@@ -7,6 +5,7 @@ export type Pizza = {
   ingredients: string[];
   price: number;
   toppings?: string[];
+  img: string;
 };
 
 export type toppingsType = {

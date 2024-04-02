@@ -1,82 +1,65 @@
 import Card from "./Cards";
-import { useContext } from "react";
-import { PizzaContext } from "../GlobalPizza/GlobalPizza";
-import { Pizza } from "../../pizzaTypes";
 import { initialPizzas } from "../GlobalPizza/GlobalPizza";
+import { Pizza } from "../../pizzaTypes";
 
 const PizzaCard = () => {
   const standardPizza = initialPizzas.filter(
-    (pizza: { type?: string }) => pizza.type === "standard"
+    (pizza: Pizza) => pizza.type === "standard"
   );
   const kebabPizza = initialPizzas.filter(
-    (pizza: { type?: string }) => pizza.type === "kebab"
+    (pizza: Pizza) => pizza.type === "kebab"
   );
   const kycklingPizza = initialPizzas.filter(
-    (pizza: { type?: string }) => pizza.type === "kyckling"
+    (pizza: Pizza) => pizza.type === "kyckling"
   );
 
   return (
     <>
-      <div className="flex flex-col w-1/3 p-4 border border-gray-200">
-        <div className="standardpizza ">
-          <h1 className="font-bold">Pizza Klass 1</h1>
-          {standardPizza.map(
-            (pizza: {
-              name: string;
-              ingredients: string[];
-              price: number;
-              id: string;
-            }) => {
-              return (
-                <Card
-                  name={pizza.name}
-                  ingredients={pizza.ingredients}
-                  price={pizza.price}
-                  id={pizza.id}
-                />
-              );
-            }
-          )}
+      <div className="bg-yellow flex flex-col items-center w-1/3 h-screen p-4 border border-gray-200 overflow-y-scroll">
+        <h1 className="font-bold">Pizza Klass 1</h1>
+        <div className="standardpizza flex flex-wrap items-center justify-center mb-6">
+          {standardPizza.map((pizza: Pizza) => {
+            return (
+              <Card
+                key={pizza.id}
+                name={pizza.name}
+                ingredients={pizza.ingredients}
+                price={pizza.price}
+                id={pizza.id}
+                img={pizza.img}
+              />
+            );
+          })}
         </div>
-        <div className="kebabpizza ">
-          <h1 className="font-bold">Pizza Klass 2</h1>
-          {kebabPizza.map(
-            (pizza: {
-              name: string;
-              ingredients: string[];
-              price: number;
-              id: string;
-            }) => {
-              return (
-                <Card
-                  name={pizza.name}
-                  ingredients={pizza.ingredients}
-                  price={pizza.price}
-                  id={pizza.id}
-                />
-              );
-            }
-          )}
+        <h1 className="font-bold">Pizza Klass 2</h1>
+        <div className="kebabpizza flex flex-wrap items-center justify-center mb-6">
+          {kebabPizza.map((pizza: Pizza) => {
+            return (
+              <Card
+                key={pizza.id}
+                name={pizza.name}
+                ingredients={pizza.ingredients}
+                price={pizza.price}
+                id={pizza.id}
+                img={pizza.img}
+              />
+            );
+          })}
         </div>
-        <div className="kycklingpizza">
-          <h1 className="font-bold">Pizza Klass 3</h1>
-          {kycklingPizza.map(
-            (pizza: {
-              name: string;
-              ingredients: string[];
-              price: number;
-              id: string;
-            }) => {
-              return (
-                <Card
-                  name={pizza.name}
-                  ingredients={pizza.ingredients}
-                  price={pizza.price}
-                  id={pizza.id}
-                />
-              );
-            }
-          )}
+        <h1 className="font-bold">Pizza Klass 3</h1>
+        <div className="kycklingpizza flex flex-wrap items-center  justify-center">
+          {kycklingPizza.map((pizza: Pizza) => {
+            return (
+              <Card
+                key={pizza.id}
+                name={pizza.name}
+                ingredients={pizza.ingredients}
+                price={pizza.price}
+                id={pizza.id}
+                img={pizza.img}
+              />
+            );
+          })}
         </div>
       </div>
     </>
