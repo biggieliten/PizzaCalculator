@@ -14,10 +14,17 @@ const PizzaDetails = ({ pizza }: { pizza: Pizza }) => {
     <div className="">
       <h3>{pizza.name}</h3>
 
+  const deletePizza = (pizzaId: string) => {
+    modifiedDispatch({ type: "REMOVE_PIZZA", payload: pizzaId });
+  };
+
+  return (
+    <div className="">
       <div className="mb-2">
-        {/* <h3>{pizza.name}</h3> */}
-        {/* <p>Price: {pizza.price} kr</p> */}
-        <i>Toppings: {pizza.toppings && pizza.toppings.join(", ")}</i>
+        <strong>{pizza.name}</strong>
+        <p>Ingredienser: {pizza.ingredients.join(", ")}</p>
+        <p>Pris: {pizza.price} kr</p>
+        <i>Tillval: {pizza.toppings && pizza.toppings.join(", ")}</i>
       </div>
 
       <ul>

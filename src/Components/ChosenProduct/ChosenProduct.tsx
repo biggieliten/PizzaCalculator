@@ -15,7 +15,7 @@ const ChosenProduct = () => {
     { name: "Extra isbergssallad ", price: 10 },
     { name: "Extra paprika ", price: 10 },
     { name: "Extra banan ", price: 10 },
-    { name: "Extra ananas: ", price: 10 },
+    { name: "Extra ananas ", price: 10 },
     { name: "Extra champinjoner ", price: 10 },
     { name: "Extra jordnötter ", price: 10 },
     { name: "Extra kebab ", price: 10 },
