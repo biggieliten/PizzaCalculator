@@ -17,15 +17,16 @@ const PizzaCard = () => {
 
   return (
     <>
-      <div className="flex flex-col w-1/3 p-4 border border-gray-200">
-        <div className="standardpizza ">
-          <h1 className="font-bold">Pizza Klass 1</h1>
+      <div className="bg-vanilla flex flex-col items-center w-1/3 h-screen p-4 border border-gray-200 overflow-y-scroll">
+        <h1 className="font-bold">Pizza Klass 1</h1>
+        <div className="standardpizza flex flex-wrap items-center justify-center mb-6">
           {standardPizza.map(
             (pizza: {
               name: string;
               ingredients: string[];
               price: number;
               id: string;
+              img?: any;
             }) => {
               return (
                 <Card
@@ -33,19 +34,21 @@ const PizzaCard = () => {
                   ingredients={pizza.ingredients}
                   price={pizza.price}
                   id={pizza.id}
+                  img={pizza.img}
                 />
               );
             }
           )}
         </div>
-        <div className="kebabpizza ">
-          <h1 className="font-bold">Pizza Klass 2</h1>
+        <h1 className="font-bold">Pizza Klass 2</h1>
+        <div className="kebabpizza flex flex-wrap items-center justify-center mb-6">
           {kebabPizza.map(
             (pizza: {
               name: string;
               ingredients: string[];
               price: number;
               id: string;
+              img?: any;
             }) => {
               return (
                 <Card
@@ -53,19 +56,21 @@ const PizzaCard = () => {
                   ingredients={pizza.ingredients}
                   price={pizza.price}
                   id={pizza.id}
+                  img={pizza.img}
                 />
               );
             }
           )}
         </div>
-        <div className="kycklingpizza">
-          <h1 className="font-bold">Pizza Klass 3</h1>
+        <h1 className="font-bold">Pizza Klass 3</h1>
+        <div className="kycklingpizza flex flex-wrap items-center  justify-center">
           {kycklingPizza.map(
             (pizza: {
               name: string;
               ingredients: string[];
               price: number;
               id: string;
+              img?: any;
             }) => {
               return (
                 <Card
@@ -73,6 +78,7 @@ const PizzaCard = () => {
                   ingredients={pizza.ingredients}
                   price={pizza.price}
                   id={pizza.id}
+                  img={pizza.img}
                 />
               );
             }

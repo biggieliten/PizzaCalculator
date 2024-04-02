@@ -69,24 +69,20 @@ const ChosenProduct = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center m-4 mt-0 w-1/3 p-4 border border-gray-200">
-        <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
-          <h1 className="font-bold px-6 py-4">Välj en Pizza</h1>
+      <div className="choiceBox flex flex-col items-center  ">
+        <div className="flex flex-col border-sky-500 size-fit m-1.5 ">
+          <h1 className="font-bold ">Tillval</h1>
+          <h2>{currentPizza?.name}</h2>
+          {/* <Button ButtonClick={() => deletePizza(pizza.id)} ButtonTitle="Delete" /> */}
         </div>
-        {currentPizza && ( // If currentPizza is not null, render the following div
-          <div className=" max-w-sm rounded overflow-hidden shadow-lg bg-darkyellow border mb-2">
-            <div className="px-6 py-4">
-              <div className="font-bold text-2xl mb-2">{currentPizza.name}</div>
-            </div>
-          </div>
-        )}
-        <div className="flex flex-col border-solid border-2 border-sky-500 size-fit">
-          <h1 className="font-bold">Tillval 10kr styck</h1>
+        <div className=" bg-vanilla flex flex-col border-solid border-2 border-sky-500 size-auto w-72 p-5 rounded">
+          <h1 className="font-bold">Toppings</h1>
 
           {toppings.map((topping) => (
             <div className="flex flex-row relative" key={topping.name}>
-              <label htmlFor={topping.name}>{`${topping.name} 
-            `}</label>
+              <label
+                htmlFor={topping.name}
+              >{`${topping.name} (${topping.price} kr)`}</label>
               <input
                 key={`${topping.name}-${resetCheckbox}`}
                 ref={checkboxRef}
@@ -95,11 +91,15 @@ const ChosenProduct = () => {
                 type="checkbox"
                 name={topping.name}
                 id=""
-                className="absolute right-0 top-1"
+                className="absolute right-0 top-1 l-10 w-5 h-5"
               />
             </div>
           ))}
-          <Button ButtonClick={AddPizzaToCart} ButtonTitle="Bekräfta tillval" />
+          <Button
+            ButtonClick={AddPizzaToCart}
+            ButtonTitle="Bekräfta"
+            styling="bg-blue text-vanilla w-20 h-7 mt-5 rounded "
+          />
         </div>
       </div>
     </>
